@@ -1,0 +1,15 @@
+@base = http://localhost:3333/users
+
+
+###
+GET {{ base }}
+
+###
+POST {{ base }}
+content-type: application/json
+
+{
+    "name": "Fulano de Tal",
+    "email": "falano@google.com",
+    "password_hash": "sahushaush545415"
+}
