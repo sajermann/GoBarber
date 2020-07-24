@@ -10,6 +10,6 @@ content-type: application/json
 
 {
     "name": "Fulano de Tal",
-    "email": "falano@google.com",
-    "password_hash": "sahushaush545415"
+    "email": "falano1@google.com",
+    "password": "1234"
 }
