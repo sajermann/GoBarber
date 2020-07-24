@@ -4,7 +4,7 @@
 ###
 GET {{ base }}/users
 
-###
+### Cadastro
 POST {{ base }}
 content-type: application/json
 
@@ -14,9 +14,19 @@ content-type: application/json
     "password": "1234"
 }
 
-###
+### Login
 POST {{ base }}/sessions
 content-type: application/json
+
+{
+  "email": "falano1@google.com",
+  "password": "1234"
+}
+
+### Update
+PUT {{ base }}/users
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTk1NTg4MzUzLCJleHAiOjE1OTYxOTMxNTN9.Tqupyb0qXTgHEddqE6zS5Nsj5342zfX7CB1rcfnfIF0
 
 {
   "email": "falano1@google.com",
