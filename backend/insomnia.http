@@ -1,8 +1,8 @@
-@base = http://localhost:3333/users
+@base = http://localhost:3333
 
 
 ###
-GET {{ base }}
+GET {{ base }}/users
 
 ###
 POST {{ base }}
@@ -12,4 +12,13 @@ content-type: application/json
     "name": "Fulano de Tal",
     "email": "falano1@google.com",
     "password": "1234"
+}
+
+###
+POST {{ base }}/sessions
+content-type: application/json
+
+{
+  "email": "falano1@google.com",
+  "password": "1234"
 }
