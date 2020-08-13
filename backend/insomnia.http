@@ -5,13 +5,13 @@
 GET {{ base }}/users
 
 ### Cadastro
-POST {{ base }}
+POST {{ base }}/users
 content-type: application/json
 
 {
-    "name": "Fulano de Tal",
-    "email": "falano1@google.com",
-    "password": "1234"
+  "name": "fulano22",
+  "email": "falano22@google.com",
+  "password": "1234"
 }
 
 ### Login
@@ -19,16 +19,26 @@ POST {{ base }}/sessions
 content-type: application/json
 
 {
-  "email": "falano1@google.com",
-  "password": "1234"
+  "email": "falano2@google.com",
+  "password": "1234567"
 }
 
 ### Update
 PUT {{ base }}/users
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTk1NTg4MzUzLCJleHAiOjE1OTYxOTMxNTN9.Tqupyb0qXTgHEddqE6zS5Nsj5342zfX7CB1rcfnfIF0
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTk3MjgzMjY3LCJleHAiOjE1OTc4ODgwNjd9.6-OuiqVC5Vc3YqeboMr8_WHfouCilV92i482o9pABxo
 
 {
-  "email": "falano1@google.com",
-  "password": "1234"
+  "name": "falono2",
+  "email": "falano2@google.com",
+  "oldPassword": "12345678",
+  "password": "1234567",
+  "confirmPassword": "1234567"
 }
+
+
+###
+GET http://serviceviusat.dwnewsoftware.com/api/usuario/Categorias
+
+###
+GET https://brasilapi.com.br/api/cep/v1/05010000
