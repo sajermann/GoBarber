@@ -26,19 +26,23 @@ content-type: application/json
 ### Update
 PUT {{ base }}/users
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTk3MjgzMjY3LCJleHAiOjE1OTc4ODgwNjd9.6-OuiqVC5Vc3YqeboMr8_WHfouCilV92i482o9pABxo
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTk3MzY3MjA3LCJleHAiOjE1OTc5NzIwMDd9.uXTyQnK2HIiHxeYdND5tdE5KYtg7eHoil3hefG5SOXk
 
 {
   "name": "falono2",
   "email": "falano2@google.com",
-  "oldPassword": "12345678",
+  "oldPassword": "1234567",
   "password": "1234567",
-  "confirmPassword": "1234567"
+  "confirmPassword": "1234567",
+  "avatar_id": 1
 }
 
 
-###
-GET http://serviceviusat.dwnewsoftware.com/api/usuario/Categorias
+### Files
+POST {{ base }}/files
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
-###
-GET https://brasilapi.com.br/api/cep/v1/05010000
+Content-Disposition: form-data; name="image"; filename="1.png"
+Content-Type: image/png
+
+
