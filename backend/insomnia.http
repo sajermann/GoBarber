@@ -9,9 +9,10 @@ POST {{ base }}/users
 content-type: application/json
 
 {
-  "name": "fulano22",
-  "email": "falano22@google.com",
-  "password": "1234"
+  "name": "Jão",
+  "email": "jao@google.com",
+  "password": "123456",
+  "provider": true
 }
 
 ### Login
@@ -19,14 +20,14 @@ POST {{ base }}/sessions
 content-type: application/json
 
 {
-  "email": "falano2@google.com",
-  "password": "1234567"
+  "email": "falano22@google.com",
+  "password": "123456"
 }
 
 ### Update
 PUT {{ base }}/users
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTk3MzY3MjA3LCJleHAiOjE1OTc5NzIwMDd9.uXTyQnK2HIiHxeYdND5tdE5KYtg7eHoil3hefG5SOXk
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk3OTc0NTQ3LCJleHAiOjE1OTg1NzkzNDd9.kueEbUy_CoD0UEdDVYHcZF_qNuEGADQN1GbeAiNNw4c
 
 {
   "name": "falono2",
@@ -37,6 +38,10 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxN
   "avatar_id": 1
 }
 
+### Providers
+GET {{ base }}/providers
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNTk3MzY3MjA3LCJleHAiOjE1OTc5NzIwMDd9.uXTyQnK2HIiHxeYdND5tdE5KYtg7eHoil3hefG5SOXk
 
 ### Files
 POST {{ base }}/files
@@ -45,4 +50,13 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0g
 Content-Disposition: form-data; name="image"; filename="1.png"
 Content-Type: image/png
 
+### Appointments
+POST {{ base }}/appointments
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk3OTc0NTQ3LCJleHAiOjE1OTg1NzkzNDd9.kueEbUy_CoD0UEdDVYHcZF_qNuEGADQN1GbeAiNNw4c
+
+{
+  "provider_id": 3,
+  "date": "2020-08-21T18:00:00-03:00"
+}
 
