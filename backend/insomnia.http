@@ -9,9 +9,9 @@ POST {{ base }}/users
 content-type: application/json
 
 {
-  "name": "Jão",
-  "email": "jao@google.com",
-  "password": "123456",
+  "name": "Sajermann",
+  "email": "contato@sajermann.com",
+  "password": "12345678",
   "provider": true
 }
 
@@ -20,8 +20,8 @@ POST {{ base }}/sessions
 content-type: application/json
 
 {
-  "email": "falano22@google.com",
-  "password": "123456"
+  "email": "contato@sajermann.com",
+  "password": "12345678"
 }
 
 ### Update
@@ -60,3 +60,12 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
   "date": "2020-08-21T18:00:00-03:00"
 }
 
+### Appointments List
+GET {{ base }}/appointments?page=1
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk3OTc0NTQ3LCJleHAiOjE1OTg1NzkzNDd9.kueEbUy_CoD0UEdDVYHcZF_qNuEGADQN1GbeAiNNw4c
+
+### Schedule List
+GET {{ base }}/schedule?date=2020-08-21T21:00:00
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTk4MzE2NzU0LCJleHAiOjE1OTg5MjE1NTR9.HNZ_fuyjL5f-PiunGpijHCpfIIHK3Q5DF-gsB_SNpU0
